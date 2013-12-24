@@ -830,8 +830,8 @@ int64 static GetBlockValue(int nHeight, int64 nFees)
 {
     int64 nSubsidy = 1 * COIN; // 1 turko per block
 
-    // Subsidy is cut in half every 22471626 blocks
-    nSubsidy >>= (nHeight / 22471626); 
+    // Subsidy is cut in half every 2102400 blocks (roughly 4 years)
+    nSubsidy >>= (nHeight / 2102400);
 
     return nSubsidy + nFees;
 }
