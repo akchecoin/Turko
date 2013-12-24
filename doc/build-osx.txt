@@ -13,7 +13,7 @@ Laszlo Hanyecz <solar@heliacal.net>
 Douglas Huff <dhuff@jrbobdobbs.org>
 
 
-See readme-qt.rst for instructions on building Akchecoin-QT, the
+See readme-qt.rst for instructions on building Turko-QT, the
 graphical user interface.
 
 Tested on 10.5, 10.6 and 10.7 intel.  PPC is not supported because it's big-endian.
@@ -28,7 +28,7 @@ install DVD, but if not, you can get the current version from https://developer.
 
 1.  Clone the github tree to get the source code:
 
-git clone git@github.com:CopiaMarket/Akchecoin.git Akchecoin
+git clone git@github.com:CopiaMarket/Turko.git Turko
 
 2.  Download and install MacPorts from http://www.macports.org/
 
@@ -44,12 +44,12 @@ sudo port install qrencode
 
 4.  Now you should be able to build litecoind:
 
-cd Akchecoin/src
+cd Turko/src
 make -f makefile.osx USE_IPV6=1
 
 Run:
-  ./Akchecoind --help  # for a list of command-line options.
+  ./Turkod --help  # for a list of command-line options.
 Run
-  ./Akchecoind -daemon # to start the litecoin daemon.
+  ./Turkod -daemon # to start the litecoin daemon.
 Run
-  ./Akchecoind help # When the daemon is running, to get a list of RPC commands
+  ./Turkod help # When the daemon is running, to get a list of RPC commands

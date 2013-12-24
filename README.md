@@ -2,9 +2,9 @@
 
 GET INVOLVED
 ===================
- - Website     - http://Akchecoins.org
+ - Website     - http://Turkos.org
  - Mailinglist - http://eepurl.com/yL05L
- - Freenode    - http://webchat.freenode.net/?channels=#Akchecoin
+ - Freenode    - http://webchat.freenode.net/?channels=#Turko
 
 ABOUT ₣ranko
 ===================

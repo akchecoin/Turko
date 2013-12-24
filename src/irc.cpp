@@ -1,6 +1,6 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2012 The Bitcoin developers
-// Copyright (c) 2011-2012 Akchecoin Developers
+// Copyright (c) 2011-2012 Turko Developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -294,14 +294,14 @@ void ThreadIRCSeed2(void* parg)
         }
         
         if (fTestNet) {
-            Send(hSocket, "JOIN #AkchecoinORGTEST3\r");
-            Send(hSocket, "WHO #AkchecoinORGTEST3\r");
+            Send(hSocket, "JOIN #TurkoORGTEST3\r");
+            Send(hSocket, "WHO #TurkoORGTEST3\r");
         } else {
-            // randomly join #AkchecoinORG00-#AkchecoinORG99
+            // randomly join #TurkoORG00-#TurkoORG99
             int channel_number = GetRandInt(100);
-            channel_number = 0; // Akchecoin: for now, just use one channel
-            Send(hSocket, strprintf("JOIN #AkchecoinORG%02d\r", channel_number).c_str());
-            Send(hSocket, strprintf("WHO #AkchecoinORG%02d\r", channel_number).c_str());
+            channel_number = 0; // Turko: for now, just use one channel
+            Send(hSocket, strprintf("JOIN #TurkoORG%02d\r", channel_number).c_str());
+            Send(hSocket, strprintf("WHO #TurkoORG%02d\r", channel_number).c_str());
         }
 
         int64 nStart = GetTime();

@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>About Akchecoin</string>
+   <string>About Turko</string>
   </property>
   <layout class="QHBoxLayout" name="horizontalLayout_2">
    <item>
@@ -50,7 +50,7 @@
           <cursorShape>IBeamCursor</cursorShape>
          </property>
          <property name="text">
-          <string>&lt;b&gt;Akchecoin&lt;/b&gt; version</string>
+          <string>&lt;b&gt;Turko&lt;/b&gt; version</string>
          </property>
          <property name="textInteractionFlags">
           <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
@@ -96,8 +96,8 @@
        <property name="text">
         <string>
           Copyright © 2009-2012 Bitcoin Developers
-          Copyright © 2011-2012 Akchecoin Developers
-		  Copyright © 2011-2012 Akchecoin Developers
+          Copyright © 2011-2012 Turko Developers
+		  Copyright © 2011-2012 Turko Developers
 
           This is experimental software.
 
@@ -105,7 +105,7 @@
 
           This product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit (http://www.openssl.org/) and cryptographic software written by Eric Young (eay@cryptsoft.com) and UPnP software written by Thomas Bernard.
 
-          Offical website: http://www.Akchecoin.com
+          Offical website: http://www.Turko.com
         </string>
        </property>
        <property name="wordWrap">

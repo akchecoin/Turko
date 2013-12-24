@@ -1,4 +1,4 @@
-Name Akchecoin
+Name Turko
 
 RequestExecutionLevel highest
 SetCompressor /SOLID lzma
@@ -6,8 +6,8 @@ SetCompressor /SOLID lzma
 # General Symbol Definitions
 !define REGKEY "SOFTWARE\$(^Name)"
 !define VERSION 0.6.3.3
-!define COMPANY "Akchecoin"
-!define URL http://www.Akchecoins.org/
+!define COMPANY "Turko"
+!define URL http://www.Turkos.org/
 
 # MUI Symbol Definitions
 !define MUI_ICON "../share/pixmaps/bitcoin.ico"
@@ -19,8 +19,8 @@ SetCompressor /SOLID lzma
 !define MUI_STARTMENUPAGE_REGISTRY_ROOT HKLM
 !define MUI_STARTMENUPAGE_REGISTRY_KEY ${REGKEY}
 !define MUI_STARTMENUPAGE_REGISTRY_VALUENAME StartMenuGroup
-!define MUI_STARTMENUPAGE_DEFAULTFOLDER Akchecoin
-!define MUI_FINISHPAGE_RUN $INSTDIR\Akchecoin-qt.exe
+!define MUI_STARTMENUPAGE_DEFAULTFOLDER Turko
+!define MUI_FINISHPAGE_RUN $INSTDIR\Turko-qt.exe
 !define MUI_UNICON "${NSISDIR}\Contrib\Graphics\Icons\modern-uninstall.ico"
 !define MUI_UNWELCOMEFINISHPAGE_BITMAP "../share/pixmaps/nsis-wizard.bmp"
 !define MUI_UNFINISHPAGE_NOAUTOCLOSE
@@ -45,20 +45,20 @@ Var StartMenuGroup
 !insertmacro MUI_LANGUAGE English
 
 # Installer attributes
-OutFile Akchecoin-0.6.3-win32-setup.exe
-InstallDir $PROGRAMFILES\Akchecoin
+OutFile Turko-0.6.3-win32-setup.exe
+InstallDir $PROGRAMFILES\Turko
 CRCCheck on
 XPStyle on
 BrandingText " "
 ShowInstDetails show
 VIProductVersion 0.6.3.0
-VIAddVersionKey ProductName Akchecoin
+VIAddVersionKey ProductName Turko
 VIAddVersionKey ProductVersion "${VERSION}"
 VIAddVersionKey CompanyName "${COMPANY}"
 VIAddVersionKey CompanyWebsite "${URL}"
 VIAddVersionKey FileVersion "${VERSION}"
 VIAddVersionKey FileDescription ""
-VIAddVersionKey LegalCopyright "Christopher Akchecoin"
+VIAddVersionKey LegalCopyright "Christopher Turko"
 InstallDirRegKey HKCU "${REGKEY}" Path
 ShowUninstDetails show
 
@@ -66,18 +66,18 @@ ShowUninstDetails show
 Section -Main SEC0000
     SetOutPath $INSTDIR
     SetOverwrite on
-    File ../release/Akchecoin-qt.exe
+    File ../release/Turko-qt.exe
     File /oname=license.txt ../COPYING
     File /oname=readme.txt ../doc/README_windows.txt
     SetOutPath $INSTDIR\daemon
-    File ../src/Akchecoind.exe
+    File ../src/Turkod.exe
     SetOutPath $INSTDIR\src
     File /r /x *.exe /x *.o ../src\*.*
     SetOutPath $INSTDIR
     WriteRegStr HKCU "${REGKEY}\Components" Main 1
 
     # Remove old wxwidgets-based-bitcoin executable and locales:
-    Delete /REBOOTOK $INSTDIR\Akchecoin.exe
+    Delete /REBOOTOK $INSTDIR\Turko.exe
     RMDir /r /REBOOTOK $INSTDIR\locale
 SectionEnd
 
@@ -87,8 +87,8 @@ Section -post SEC0001
     WriteUninstaller $INSTDIR\uninstall.exe
     !insertmacro MUI_STARTMENU_WRITE_BEGIN Application
     CreateDirectory $SMPROGRAMS\$StartMenuGroup
-    CreateShortcut "$SMPROGRAMS\$StartMenuGroup\Akchecoin.lnk" $INSTDIR\Akchecoin-qt.exe
-    CreateShortcut "$SMPROGRAMS\$StartMenuGroup\Uninstall Akchecoin.lnk" $INSTDIR\uninstall.exe
+    CreateShortcut "$SMPROGRAMS\$StartMenuGroup\Turko.lnk" $INSTDIR\Turko-qt.exe
+    CreateShortcut "$SMPROGRAMS\$StartMenuGroup\Uninstall Turko.lnk" $INSTDIR\uninstall.exe
     !insertmacro MUI_STARTMENU_WRITE_END
     WriteRegStr HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" DisplayName "$(^Name)"
     WriteRegStr HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" DisplayVersion "${VERSION}"
@@ -99,9 +99,9 @@ Section -post SEC0001
     WriteRegDWORD HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" NoModify 1
     WriteRegDWORD HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" NoRepair 1
     WriteRegStr HKCR "litceoin" "URL Protocol" ""
-    WriteRegStr HKCR "Akchecoin" "" "URL:Bitcoin"
-    WriteRegStr HKCR "Akchecoin\DefaultIcon" "" $INSTDIR\Akchecoin-qt.exe
-    WriteRegStr HKCR "Akchecoin\shell\open\command" "" '"$INSTDIR\Akchecoin-qt.exe" "$$1"'
+    WriteRegStr HKCR "Turko" "" "URL:Bitcoin"
+    WriteRegStr HKCR "Turko\DefaultIcon" "" $INSTDIR\Turko-qt.exe
+    WriteRegStr HKCR "Turko\shell\open\command" "" '"$INSTDIR\Turko-qt.exe" "$$1"'
 SectionEnd
 
 # Macro for selecting uninstaller sections
@@ -119,7 +119,7 @@ done${UNSECTION_ID}:
 
 # Uninstaller sections
 Section /o -un.Main UNSEC0000
-    Delete /REBOOTOK $INSTDIR\Akchecoin-qt.exe
+    Delete /REBOOTOK $INSTDIR\Turko-qt.exe
     Delete /REBOOTOK $INSTDIR\license.txt
     Delete /REBOOTOK $INSTDIR\readme.txt
     RMDir /r /REBOOTOK $INSTDIR\daemon
@@ -129,9 +129,9 @@ SectionEnd
 
 Section -un.post UNSEC0001
     DeleteRegKey HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)"
-    Delete /REBOOTOK "$SMPROGRAMS\$StartMenuGroup\Uninstall Akchecoin.lnk"
-    Delete /REBOOTOK "$SMPROGRAMS\$StartMenuGroup\Akchecoin.lnk"
-    Delete /REBOOTOK "$SMSTARTUP\Akchecoin.lnk"
+    Delete /REBOOTOK "$SMPROGRAMS\$StartMenuGroup\Uninstall Turko.lnk"
+    Delete /REBOOTOK "$SMPROGRAMS\$StartMenuGroup\Turko.lnk"
+    Delete /REBOOTOK "$SMSTARTUP\Turko.lnk"
     Delete /REBOOTOK $INSTDIR\uninstall.exe
     Delete /REBOOTOK $INSTDIR\debug.log
     Delete /REBOOTOK $INSTDIR\db.log
@@ -139,7 +139,7 @@ Section -un.post UNSEC0001
     DeleteRegValue HKCU "${REGKEY}" Path
     DeleteRegKey /IfEmpty HKCU "${REGKEY}\Components"
     DeleteRegKey /IfEmpty HKCU "${REGKEY}"
-    DeleteRegKey HKCR "Akchecoin"
+    DeleteRegKey HKCR "Turko"
     RmDir /REBOOTOK $SMPROGRAMS\$StartMenuGroup
     RmDir /REBOOTOK $INSTDIR
     Push $R0
