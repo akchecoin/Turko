@@ -1,8 +1,8 @@
-Building Franko
+Building Akchecoin
 
 See doc/readme-qt.rst for instructions on building Featehrcoin-QT,
 the intended-for-end-users, nice-graphical-interface, reference
-implementation of Franko.
+implementation of Akchecoin.
 
 See doc/build-*.txt for instructions on building featehrcoind,
 the intended-for-services, no-graphical-interface, reference
