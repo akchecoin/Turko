@@ -1,3 +1,5 @@
+TÜRKÇE
+-------------------
 Turko - 1 dakika blok süreli yüksek değerli bir kriptoakçe.
 Turko proof-of-work olarak scrypt kullanmaktadır.
 
@@ -16,6 +18,8 @@ Turko Hakkında
  - 25,000,000 toplam akçe.
  - testnet portu 41683
  - mainnet portu 51683
+
+ENGLISH
 ---------------------
 
 Turko - a high value cryptocurrency with 1 minute block times.
