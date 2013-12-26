@@ -1,10 +1,30 @@
+Turko - 1 dakika blok süreli yüksek değerli bir kriptoakçe.
+Turko proof-of-work olarak scrypt kullanmaktadır.
+
+KATIL
+===================
+ - Website     - Coming soon
+ - Mailinglist - http://eepurl.com/LrAz1
+ - Freenode    - http://webchat.freenode.net/?channels=#Turko
+
+Turko Hakkında
+===================
+ - 1 dakikalık blok hedeflemesi
+ - Her 2102400 blockta üretim yarılanıyor. (~4 yıl)
+ - Blok başına 1 akçe.
+ - Zorluk yaklaşık olarak her 6 saatte bir tekrar ayarlanıyor.
+ - 25,000,000 toplam akçe.
+ - testnet portu 41683
+ - mainnet portu 51683
+---------------------
+
 Turko - a high value cryptocurrency with 1 minute block times.
 Turko uses scrypt for proof of work.
 
 GET INVOLVED
 ===================
- - Website     - http://Turkos.org
- - Mailinglist - http://eepurl.com/yL05L
+ - Website     - Coming soon
+ - Mailinglist - http://eepurl.com/LrAz1
  - Freenode    - http://webchat.freenode.net/?channels=#Turko
 
 ABOUT Turko
