@@ -15,7 +15,7 @@
 #define CLIENT_VERSION_MAJOR       0
 #define CLIENT_VERSION_MINOR       6
 #define CLIENT_VERSION_REVISION    3
-#define CLIENT_VERSION_BUILD       3 //updated subsidary halving
+#define CLIENT_VERSION_BUILD       4 //updated subsidary halving
 
 static const int CLIENT_VERSION =
                            1000000 * CLIENT_VERSION_MAJOR
